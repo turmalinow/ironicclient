@@ -1,2 +1,5 @@
 FROM python:2.7-onbuild
-ENTRYPOINT [ "python"]
+
+ENV SCRIPT cHJpbnQgImhlbGxvIGZyb20iCg==
+
+CMD echo -n $SCRIPT | base64 -d | python
